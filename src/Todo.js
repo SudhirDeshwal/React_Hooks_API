@@ -1,28 +1,35 @@
-import React, { Component } from 'react';
+import React, { Component , useState , useEffect} from 'react';
 import axios from 'axios';
 import Post from './Post';
 import PostContext from './PostContext';
 
 
-   class Todo extends Component {
+   function Todo()  {
 
-    state = {
+       const[posts , setPosts]  = useState([])
 
-      posts : [],
-    };
+    // state = {
 
-    componentDidMount() {
-      axios.get('https://jsonplaceholder.typicode.com/todos')
-      .then((response) => { this.setState({ posts: response.data });});
+    //   posts : [],
+    // };
+
+    // componentDidMount() {
+    //   axios.get('https://jsonplaceholder.typicode.com/todos')
+    //   .then((response) => { this.setState({ posts: response.data });});
   
-    
-    }
+    useEffect(()=> {
 
-render() {
+      axios.get('https://jsonplaceholder.typicode.com/todos').then((response) => { 
+        setPosts(response.data );
+      });
+
+    },[] )
+
+
       return (
         <div>
 
-            {this.state.posts.map((post) => (
+            {posts.map((post) => (
             <PostContext.Provider value= {{
               post:post,
               key:post.id
@@ -40,6 +47,6 @@ render() {
         </div>
       );
     }
-    };
+    
 
     export default Todo;
