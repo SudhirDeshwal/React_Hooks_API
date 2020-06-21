@@ -1,11 +1,37 @@
 import React from 'react';
+import TasklistContext from './TasklistContext';
 
 
 const Tasklist = (props) => {
 
     return (
          <div> 
-        <h4>
+
+        <TasklistContext.Consumer>
+             {
+               (context) => (
+                <div>
+                <h4> 
+                  <button onClick={() => context.removeTask(context.id)}>X</button> {context.title}
+
+                </h4>
+                <ul> 
+          {context.item.map((t) => (
+              <li>{t}</li> ) 
+          ) }
+                
+          </ul>
+                </div>
+               )
+             }
+
+        </TasklistContext.Consumer>
+
+
+
+
+
+        {/* <h4>
         <button onClick={() => props.removeTask(props.id)}>X</button>
       {props.title}</h4>
          <ul> 
@@ -13,7 +39,7 @@ const Tasklist = (props) => {
               <li>{t}</li> ) 
           ) }
                 
-          </ul>
+          </ul> */}
         </div>
          
          );

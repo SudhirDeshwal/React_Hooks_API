@@ -57,24 +57,38 @@ class Mainpost extends Component {
 render(){
 
 
-  
+  let filteredlist = this.state.filterlist === '' ? this.state.tasklist :
+  this.state.tasklist.filter((t) => t.title === this.state.filterlist);
 
     return(
       <div className='App'>
       {/* <button onClick={this.switchNamehandler}>Click here to Add New Task</button>  */}
      {/* <Header title="Task List" items={this.state.tasklist.length}/> */}
-
+       
+     <Taskfilter tasklist = {this.state.tasklist}  handlefilter={this.handleFilterTask} />
     <HeaderContext.Provider value={{items:this.state.tasklist.length , title:"Task List"}}>
        <Header></Header>
      </HeaderContext.Provider>
 
-     {this.state.tasklist.map((t1) => (
+     {/* {this.state.tasklist.map((t1) => (
     <Tasklist 
      title={t1.title} 
      item={t1.tasks}
      id={t1.id} 
      removeTask={this.handleRemoveTask}/> 
-     ))}
+     ))}  */}
+
+{filteredlist.map((t1) => (
+     <TasklistContext.Provider value= {{
+       title:t1.title,
+       item:t1.tasks,
+       id:t1.id,
+       removeTask:this.handleRemoveTask
+
+}}>
+       <Tasklist></Tasklist>
+     </TasklistContext.Provider> 
+     ))} 
 
      <AddTaskform addtask={this.addNewTask}></AddTaskform>
 
