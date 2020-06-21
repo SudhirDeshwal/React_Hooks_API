@@ -45,6 +45,19 @@ function TasklistHooksContext() {
 //     }
 //   })}
 
+const addNewTask = (title, tasks) => {
+
+      settasks(
+         [ ...tasklist , {title: title,tasks : tasks}]
+          
+          ) ;
+
+      } ;
+       
+
+
+
+
 //    handleRemoveTask = (id) => {
 //     this.setState((prevState) => {
 //       return {
@@ -81,7 +94,7 @@ function TasklistHooksContext() {
       {/* <button onClick={this.switchNamehandler}>Click here to Add New Task</button>  */}
      {/* <Header title="Task List" items={this.state.tasklist.length}/> */}
        
-    <HeaderContext.Provider value={{items:tasklist.length , title:"Task List"}}>
+    <HeaderContext.Provider value={{items:"4" , title:"Task List"}}>
        <Header></Header>
      </HeaderContext.Provider>
 
@@ -105,7 +118,7 @@ function TasklistHooksContext() {
      </TasklistContext.Provider> 
      ))} 
 
-     {/* <AddTaskform addtask={this.addNewTask}></AddTaskform> */}
+      <AddTaskform addtask={addNewTask}></AddTaskform> 
 
      </div>
     );

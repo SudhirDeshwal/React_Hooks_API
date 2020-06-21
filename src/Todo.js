@@ -18,10 +18,6 @@ import PostContext from './PostContext';
     
     }
 
-
-    
-
-
 render() {
       return (
         <div>

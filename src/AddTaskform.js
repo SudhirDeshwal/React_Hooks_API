@@ -18,6 +18,7 @@ class AddTaskform extends Component {
                   this.state.task1,
                    this.state.task2,
                   this.state.task3,
+                
 
                 ]);
               this.setState({ TaskName: '' });
@@ -53,6 +54,8 @@ class AddTaskform extends Component {
             placeholder='Task3'
             value={this.state.value}
             onChange={this.handleChange} />
+
+           
 
            <input type="submit"></input>
          </form>
