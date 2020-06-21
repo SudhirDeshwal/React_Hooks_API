@@ -1,11 +1,20 @@
 import React from 'react';
+import PostContext from './PostContext';
 
 
-const Post = (props) => {
+const Post = () => {
   return (
-    <div>
-      <h4>Title : {props.post.title}</h4>
+    <PostContext.Consumer>
+        {
+          (context) => (
+            <div>
+      <h4>Title : {context.post.title}</h4>
     </div>
+          )
+        }
+
+    </PostContext.Consumer>
+    
   );
 };
 

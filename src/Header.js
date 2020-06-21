@@ -1,7 +1,7 @@
 import React from 'react';
 import HeaderContext from './HeaderContext';
 
-const Header = (props)=> {
+const Header = ()=> {
 
     return (
          <div> 

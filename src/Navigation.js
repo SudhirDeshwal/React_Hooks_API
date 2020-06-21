@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link, NavLink } from 'react-router-dom';
 
-const Navigation = (props)=> {
+const Navigation = ()=> {
 
     return (
          <div> 
@@ -18,7 +18,7 @@ const Navigation = (props)=> {
                  <NavLink to='/todo'>Todo</NavLink>
              </li>
              <li>
-                 <NavLink to='/maintasklist'>Tasklist</NavLink>
+                 <NavLink to='/maintasklist'>Tasklist(dont click:old states)</NavLink>
              </li>
 
              </ul>              

@@ -2,7 +2,7 @@ import React from 'react';
 import TasklistContext from './TasklistContext';
 
 
-const Tasklist = (props) => {
+const Tasklist = () => {
 
     return (
          <div> 
