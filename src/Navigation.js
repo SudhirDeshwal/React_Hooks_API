@@ -14,8 +14,9 @@ const Navigation = ()=> {
              <li>
                  <NavLink  to='/mainpost'>Task List with Context api</NavLink>
              </li>
+            
              <li>
-                 <NavLink to='/todo'>Todo</NavLink>
+                 <NavLink to='/todo'>Todo with Context api</NavLink>
              </li>
              <li>
                  <NavLink to='/maintasklist'>Tasklist(dont click:old states)</NavLink>

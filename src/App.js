@@ -11,6 +11,7 @@ import {BrowserRouter, Route , Switch} from 'react-router-dom'
 import PageNotFound from './PageNotFound';
 import MainTasklist from './MainTasklist';
 import Mainpost from './Mainpost';
+import TasklistHooksContext from './TasklistHooksContext';
 
 
 function App() {
@@ -23,7 +24,8 @@ function App() {
           <Route path='/' exact component={Home} />
           <Route path='/mainpost' component={Mainpost} />
           <Route path='/todo' component={Todo} />
-          <Route path='/maintasklist' component={MainTasklist} />
+
+          <Route path='/maintasklist' component={TasklistHooksContext} />
           <Route component={PageNotFound} />
           </Switch>
       </div>
