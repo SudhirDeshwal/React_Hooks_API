@@ -45,13 +45,17 @@ function TasklistHooksContext() {
 //     }
 //   })}
 
-//   handleRemoveTask = (id) => {
+//    handleRemoveTask = (id) => {
 //     this.setState((prevState) => {
 //       return {
-//         tasklist: prevState.tasklist.filter((t) => t.id !== id),
-//       };
+//          tasklist: prevState.tasklist.filter((t) => t.id !== id),
+//      };
 //     });
 //   };
+
+      const handleRemoveTask = (id) => {
+        settasks(tasklist.filter((t) => t.id !== id))
+      }
 
 
 //   handleFilterTask = (title) => {
@@ -94,7 +98,7 @@ function TasklistHooksContext() {
        title:t1.title,
        item:t1.tasks,
        id:t1.id,
-      // removeTask:this.handleRemoveTask
+      removeTask:handleRemoveTask
 
 }}>
        <Tasklist></Tasklist>
