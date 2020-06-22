@@ -5,7 +5,7 @@ const Home = (props)=> {
     return (
          <div> 
         
-          <h4>This is Home: check data in Todo and Tasklist</h4>
+          <h4>This is Home: This app is combination of all react technologies we have used till now.</h4>
          </div>
          
          );

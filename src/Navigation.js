@@ -12,14 +12,14 @@ const Navigation = ()=> {
                  <NavLink to='/' exact>Home</NavLink>
              </li>
              <li>
-                 <NavLink  to='/mainpost'>Task List with Context api</NavLink>
+                 <NavLink  to='/mainpost'>Task List with Context api states</NavLink>
              </li>
             
              <li>
-                 <NavLink to='/todo'>Todo with Context api</NavLink>
+                 <NavLink to='/todo'>Todo with Context api and hooks</NavLink>
              </li>
              <li>
-                 <NavLink to='/maintasklist'>Tasklist(dont click:old states)</NavLink>
+                 <NavLink to='/maintasklist'>Tasklist with context api and hooks</NavLink>
              </li>
 
              </ul>              
